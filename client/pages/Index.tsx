@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about";
@@ -13,22 +12,20 @@ import { BackToTop } from "@/components/back-to-top";
 
 export default function Index() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="anshumaan-portfolio-theme">
-      <div className="min-h-screen bg-background text-foreground">
-        <Header />
-        <main>
-          <HeroSection />
-          <AboutSection />
-          <SkillsSection />
-          <ProjectsSection />
-          <ExperienceSection />
-          <EducationSection />
-          <CertificationsSection />
-          <ContactSection />
-        </main>
-        <Footer />
-        <BackToTop />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <EducationSection />
+        <CertificationsSection />
+        <ContactSection />
+      </main>
+      <Footer />
+      <BackToTop />
+    </div>
   );
 }
