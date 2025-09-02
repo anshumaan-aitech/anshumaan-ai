@@ -64,26 +64,37 @@ export function AboutSection() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-900 dark:to-brand-800 shadow-2xl">
-              {/* Real profile image */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F800b71726c1648e2a9c47b0d351ed875%2F8d088673864f4a1f88cf09a962efaf4f?format=webp&width=800"
-                alt="Anshumaan Sharma - Full Stack Developer"
-                className="w-full h-full object-cover object-center"
-                loading="lazy"
-              />
-
-              {/* Floating decoration */}
+            {/* Animated border container */}
+            <div className="relative mx-auto lg:mx-0 w-[450px] h-[450px] p-2">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-4 -right-4 w-24 h-24 bg-brand-600/20 rounded-full"
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-3xl"
+                style={{
+                  background: "conic-gradient(from 0deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #3b82f6)",
+                }}
               />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-400/20 rounded-full"
-              />
+              <div className="relative w-full h-full rounded-3xl overflow-hidden bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-900 dark:to-brand-800 shadow-2xl">
+                {/* Real profile image */}
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F800b71726c1648e2a9c47b0d351ed875%2F8d088673864f4a1f88cf09a962efaf4f?format=webp&width=800"
+                  alt="Anshumaan Sharma - Full Stack Developer"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+
+                {/* Floating decoration */}
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -top-4 -right-4 w-24 h-24 bg-brand-600/20 rounded-full"
+                />
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  className="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-400/20 rounded-full"
+                />
+              </div>
             </div>
           </motion.div>
 
