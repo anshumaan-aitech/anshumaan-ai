@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, FileDown, Linkedin } from "lucide-react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,15 +34,6 @@ export function Header() {
     }
   };
 
-  const handleDownloadResume = () => {
-    // Create a dummy PDF download - in real implementation, this would be a real resume file
-    const link = document.createElement("a");
-    link.href = "#"; // Replace with actual resume PDF path
-    link.download = "Anshumaan_Sharma_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
     <>
@@ -99,12 +90,18 @@ export function Header() {
               className="hidden md:flex items-center space-x-3"
             >
               <Button
-                onClick={handleDownloadResume}
+                asChild
                 size="sm"
                 className="bg-brand-600 hover:bg-brand-700 text-white"
               >
-                <FileDown className="w-4 h-4 mr-2" />
-                Resume
+                <a
+                  href="https://github.com/anshumaan-sharma"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  GitHub
+                </a>
               </Button>
               <Button
                 asChild
@@ -201,11 +198,17 @@ export function Header() {
                 </nav>
                 <div className="p-4 border-t border-neutral-200 dark:border-neutral-800 space-y-3">
                   <Button
-                    onClick={handleDownloadResume}
+                    asChild
                     className="w-full bg-brand-600 hover:bg-brand-700 text-white"
                   >
-                    <FileDown className="w-4 h-4 mr-2" />
-                    Download Resume
+                    <a
+                      href="https://github.com/anshumaan-sharma"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      GitHub Profile
+                    </a>
                   </Button>
                   <Button
                     asChild
