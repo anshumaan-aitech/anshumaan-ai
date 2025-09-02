@@ -11,7 +11,6 @@ const projects = [
     category: "Final Year Project",
     status: "Current",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: true,
     image: "/placeholder.svg"
   },
@@ -22,7 +21,6 @@ const projects = [
     category: "Hackathon Project",
     status: "Winner",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: true,
     image: "/placeholder.svg"
   },
@@ -33,7 +31,6 @@ const projects = [
     category: "Hackathon Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: true,
     image: "/placeholder.svg"
   },
@@ -44,7 +41,6 @@ const projects = [
     category: "Enterprise Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   },
@@ -55,7 +51,6 @@ const projects = [
     category: "Healthcare Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   },
@@ -66,7 +61,6 @@ const projects = [
     category: "Educational Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   },
@@ -77,7 +71,6 @@ const projects = [
     category: "Frontend Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   },
@@ -88,7 +81,6 @@ const projects = [
     category: "Frontend Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   },
@@ -99,7 +91,6 @@ const projects = [
     category: "AI Project",
     status: "Completed",
     github: "https://github.com/itsanshumaansharma",
-    demo: "#",
     featured: false,
     image: "/placeholder.svg"
   }
@@ -215,16 +206,6 @@ export function ProjectsSection() {
                             View Code
                           </a>
                         </Button>
-                        <Button
-                          asChild
-                          variant="outline"
-                          className="border-brand-600 text-brand-600 hover:bg-brand-600 hover:text-white"
-                        >
-                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Live Demo
-                          </a>
-                        </Button>
                       </div>
                     </div>
                   </div>
@@ -296,22 +277,11 @@ export function ProjectsSection() {
                         asChild
                         size="sm"
                         variant="outline"
-                        className="flex-1"
+                        className="w-full"
                       >
                         <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 mr-1" />
-                          Code
-                        </a>
-                      </Button>
-                      <Button
-                        asChild
-                        size="sm"
-                        variant="outline"
-                        className="flex-1"
-                      >
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4 mr-1" />
-                          Demo
+                          <Github className="w-4 h-4 mr-2" />
+                          View Code
                         </a>
                       </Button>
                     </div>
