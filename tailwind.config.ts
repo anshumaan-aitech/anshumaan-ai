@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -22,6 +26,16 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(var(--primary-50))",
+          100: "hsl(var(--primary-100))",
+          200: "hsl(var(--primary-200))",
+          300: "hsl(var(--primary-300))",
+          400: "hsl(var(--primary-400))",
+          500: "hsl(var(--primary-500))",
+          600: "hsl(var(--primary-600))",
+          700: "hsl(var(--primary-700))",
+          800: "hsl(var(--primary-800))",
+          900: "hsl(var(--primary-900))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,11 +71,45 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Professional portfolio color palette
+        brand: {
+          50: "hsl(var(--brand-50))",
+          100: "hsl(var(--brand-100))",
+          200: "hsl(var(--brand-200))",
+          300: "hsl(var(--brand-300))",
+          400: "hsl(var(--brand-400))",
+          500: "hsl(var(--brand-500))",
+          600: "hsl(var(--brand-600))",
+          700: "hsl(var(--brand-700))",
+          800: "hsl(var(--brand-800))",
+          900: "hsl(var(--brand-900))",
+        },
+        neutral: {
+          50: "hsl(var(--neutral-50))",
+          100: "hsl(var(--neutral-100))",
+          200: "hsl(var(--neutral-200))",
+          300: "hsl(var(--neutral-300))",
+          400: "hsl(var(--neutral-400))",
+          500: "hsl(var(--neutral-500))",
+          600: "hsl(var(--neutral-600))",
+          700: "hsl(var(--neutral-700))",
+          800: "hsl(var(--neutral-800))",
+          900: "hsl(var(--neutral-900))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +128,52 @@ export default {
             height: "0",
           },
         },
+        "fade-in": {
+          from: {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+        "slide-in-left": {
+          from: {
+            opacity: "0",
+            transform: "translateX(-20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "slide-in-right": {
+          from: {
+            opacity: "0",
+            transform: "translateX(20px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateX(0)",
+          },
+        },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out",
+        "slide-in-left": "slide-in-left 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },
