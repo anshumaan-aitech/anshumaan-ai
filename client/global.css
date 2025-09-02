@@ -117,20 +117,20 @@
     --primary-800: 240 4.8% 95.9%;
     --primary-900: 0 0% 98%;
 
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 0 0% 8%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 240 3.7% 15.9%;
+    --muted: 0 0% 8%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 0 0% 8%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 75% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
     --ring: 240 4.9% 83.9%;
 
     --sidebar-background: 240 5.9% 10%;
