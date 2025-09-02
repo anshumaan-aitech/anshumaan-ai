@@ -1,20 +1,11 @@
 import { motion } from "framer-motion";
-import { FileDown, Linkedin, ChevronDown } from "lucide-react";
+import { Github, Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Typewriter } from "../typewriter";
 
 const skills = ["Java", "React", "PHP", "Python", "Flask", "SAP CPI"];
 
 export function HeroSection() {
-  const handleDownloadResume = () => {
-    // Create a dummy PDF download - in real implementation, this would be a real resume file
-    const link = document.createElement("a");
-    link.href = "#"; // Replace with actual resume PDF path
-    link.download = "Anshumaan_Sharma_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const scrollToAbout = () => {
     const aboutSection = document.querySelector("#about");
@@ -86,12 +77,18 @@ export function HeroSection() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Button
-              onClick={handleDownloadResume}
+              asChild
               size="lg"
               className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-6 text-lg font-medium rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <FileDown className="w-5 h-5 mr-3" />
-              Download Resume
+              <a
+                href="https://github.com/anshumaan-sharma"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="w-5 h-5 mr-3" />
+                View GitHub
+              </a>
             </Button>
             <Button
               asChild
