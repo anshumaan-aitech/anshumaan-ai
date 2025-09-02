@@ -22,9 +22,9 @@ const stats = [
   },
   {
     icon: Zap,
-    number: "2+",
-    label: "Years Experience",
-    description: "In software development"
+    number: "∞",
+    label: "Innovation Drive",
+    description: "Passion for cutting-edge solutions"
   }
 ];
 
