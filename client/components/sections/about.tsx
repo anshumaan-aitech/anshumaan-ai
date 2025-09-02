@@ -65,13 +65,14 @@ export function AboutSection() {
             className="relative"
           >
             <div className="relative mx-auto lg:mx-0 w-80 h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-900 dark:to-brand-800 shadow-2xl">
-              {/* Placeholder for profile image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full bg-brand-600 flex items-center justify-center">
-                  <span className="text-6xl font-bold text-white">AS</span>
-                </div>
-              </div>
-              
+              {/* Real profile image */}
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F800b71726c1648e2a9c47b0d351ed875%2F8d088673864f4a1f88cf09a962efaf4f?format=webp&width=800"
+                alt="Anshumaan Sharma - Full Stack Developer"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+
               {/* Floating decoration */}
               <motion.div
                 animate={{ rotate: 360 }}
