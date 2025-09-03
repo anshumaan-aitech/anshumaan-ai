@@ -119,9 +119,15 @@ export function HeroSection() {
             </span>
             <motion.button
               onClick={scrollToAbout}
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
+              animate={{ y: [0, 8, 0] }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                repeatType: "loop"
+              }}
+              className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors hardware-accelerated"
+              style={{ willChange: "transform" }}
             >
               <ChevronDown className="w-6 h-6" />
             </motion.button>
