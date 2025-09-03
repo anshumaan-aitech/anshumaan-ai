@@ -259,10 +259,15 @@
     @apply bg-black/10 backdrop-blur-md border border-white/10;
   }
 
-  /* Smooth scrolling with performance optimization */
+  /* Enhanced smooth scrolling with better performance */
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -275,6 +280,11 @@
     html {
       scroll-behavior: auto;
     }
+  }
+
+  /* Enhanced scrolling performance */
+  * {
+    box-sizing: border-box;
   }
 
   /* Performance optimizations for animations */
@@ -299,6 +309,18 @@
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
+  }
+
+  /* Optimize scroll containers */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Improve momentum scrolling on iOS */
+  .overflow-scroll,
+  .overflow-y-scroll {
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Hide scrollbar for webkit browsers */
