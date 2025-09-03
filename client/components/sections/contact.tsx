@@ -61,7 +61,7 @@ const socialLinks = [
     label: "GitHub",
     username: "@itsanshumaansharma",
     url: "https://github.com/itsanshumaansharma",
-    color: "text-gray-800 dark:text-gray-200 hover:text-gray-900 dark:hover:text-gray-100"
+    color: "text-neutral-900 dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300"
   }
 ];
 
