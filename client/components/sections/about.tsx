@@ -68,10 +68,16 @@ export function AboutSection() {
             <div className="relative mx-auto lg:mx-0 w-[450px] h-[450px] p-2">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-3xl"
+                transition={{
+                  duration: 12,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatType: "loop"
+                }}
+                className="absolute inset-0 rounded-3xl hardware-accelerated"
                 style={{
                   background: "conic-gradient(from 0deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #3b82f6)",
+                  willChange: "transform"
                 }}
               />
               <div className="relative w-full h-full rounded-3xl overflow-hidden bg-gradient-to-br from-brand-100 to-brand-200 dark:from-brand-900 dark:to-brand-800 shadow-2xl">
@@ -81,18 +87,31 @@ export function AboutSection() {
                   alt="Anshumaan Sharma - Full Stack Developer"
                   className="w-full h-full object-cover object-center"
                   loading="lazy"
+                  decoding="async"
                 />
 
-                {/* Floating decoration */}
+                {/* Simplified floating decoration */}
                 <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -top-4 -right-4 w-24 h-24 bg-brand-600/20 rounded-full"
+                  animate={{
+                    rotate: 360,
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{
+                    rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  className="absolute -top-4 -right-4 w-20 h-20 bg-brand-600/15 rounded-full hardware-accelerated"
                 />
                 <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-400/20 rounded-full"
+                  animate={{
+                    rotate: -360,
+                    scale: [1, 0.9, 1]
+                  }}
+                  transition={{
+                    rotate: { duration: 25, repeat: Infinity, ease: "linear" },
+                    scale: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+                  }}
+                  className="absolute -bottom-4 -left-4 w-24 h-24 bg-brand-400/15 rounded-full hardware-accelerated"
                 />
               </div>
             </div>
