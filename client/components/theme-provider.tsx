@@ -52,10 +52,16 @@ export function ThemeProvider({
         : "light";
 
       root.classList.add(systemTheme);
+      // Ensure body has the correct theme class as well
+      document.body.className = document.body.className.replace(/\b(light|dark)\b/g, '');
+      document.body.classList.add(systemTheme);
       return;
     }
 
     root.classList.add(theme);
+    // Ensure body has the correct theme class as well
+    document.body.className = document.body.className.replace(/\b(light|dark)\b/g, '');
+    document.body.classList.add(theme);
   }, [theme, mounted]);
 
   // Listen for system theme changes
