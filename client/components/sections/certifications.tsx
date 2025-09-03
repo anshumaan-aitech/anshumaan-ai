@@ -36,28 +36,6 @@ const certifications = [
     icon: Award,
     verified: true,
     credentialUrl: "#"
-  },
-  {
-    title: "Project Development Using Java",
-    issuer: "Udemy",
-    year: "2023",
-    type: "Online Course",
-    description: "Comprehensive course on Java project development, covering best practices, design patterns, and real-world application development.",
-    skills: ["Java", "Project Development", "Design Patterns", "Best Practices"],
-    icon: GraduationCap,
-    verified: true,
-    credentialUrl: "#"
-  },
-  {
-    title: "Advanced Diploma in Computer Application",
-    issuer: "Wizard Tech",
-    year: "2022",
-    type: "Diploma",
-    description: "Advanced diploma program covering comprehensive computer applications, programming fundamentals, and software development principles.",
-    skills: ["Computer Applications", "Programming", "Software Development", "IT Fundamentals"],
-    icon: Award,
-    verified: true,
-    credentialUrl: "#"
   }
 ];
 
