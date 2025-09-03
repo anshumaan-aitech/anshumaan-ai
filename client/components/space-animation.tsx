@@ -147,9 +147,9 @@ export function SpaceAnimation() {
           className="space-y-6"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Exploring the <span className="text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Digital Universe</span>
+            Exploring the <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Digital Universe</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
             Just like stars in the cosmos, every line of code contributes to something greater. 
             Let's build the future together, one innovation at a time.
           </p>
