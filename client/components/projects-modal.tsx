@@ -131,7 +131,7 @@ export function ProjectsModal({ isOpen, onClose }: ProjectsModalProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-6xl max-h-[90vh] bg-white dark:bg-neutral-900 rounded-3xl shadow-2xl border border-neutral-200 dark:border-neutral-700"
+            className="relative w-full max-w-6xl max-h-[90vh] mx-4 bg-white dark:bg-neutral-900 rounded-2xl sm:rounded-3xl shadow-2xl border border-neutral-200 dark:border-neutral-700"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
