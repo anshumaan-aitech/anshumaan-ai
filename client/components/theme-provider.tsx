@@ -71,8 +71,14 @@ export function ThemeProvider({
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handleChange = () => {
       const root = window.document.documentElement;
+      const newTheme = mediaQuery.matches ? "dark" : "light";
+
       root.classList.remove("light", "dark");
-      root.classList.add(mediaQuery.matches ? "dark" : "light");
+      root.classList.add(newTheme);
+
+      // Update body class as well
+      document.body.className = document.body.className.replace(/\b(light|dark)\b/g, '');
+      document.body.classList.add(newTheme);
     };
 
     mediaQuery.addEventListener("change", handleChange);
