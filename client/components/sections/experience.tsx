@@ -161,7 +161,7 @@ export function ExperienceSection() {
           className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {[
-            { label: "Years of Experience", value: "2+", icon: Calendar },
+            { label: "Professional Journey", value: "∞", icon: Calendar },
             { label: "Key Positions", value: "3", icon: Briefcase },
             { label: "Core Technologies", value: "8+", icon: Award },
             { label: "Professional Growth", value: "∞", icon: GraduationCap }
