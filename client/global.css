@@ -181,22 +181,42 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Force dark mode text colors */
-  .dark body,
-  .dark * {
-    color: inherit;
+  /* Force dark mode text colors with higher specificity */
+  html.dark,
+  body.dark,
+  .dark {
+    color: hsl(var(--foreground));
   }
 
-  .dark .text-neutral-600 {
+  .dark .text-neutral-600,
+  html.dark .text-neutral-600,
+  body.dark .text-neutral-600 {
     color: hsl(var(--neutral-400)) !important;
   }
 
-  .dark .text-neutral-700 {
+  .dark .text-neutral-700,
+  html.dark .text-neutral-700,
+  body.dark .text-neutral-700 {
     color: hsl(var(--neutral-300)) !important;
   }
 
-  .dark .text-neutral-900 {
+  .dark .text-neutral-900,
+  html.dark .text-neutral-900,
+  body.dark .text-neutral-900 {
     color: hsl(var(--neutral-100)) !important;
+  }
+
+  /* Ensure paragraph text is properly colored in dark mode */
+  .dark p,
+  html.dark p,
+  body.dark p {
+    color: hsl(var(--neutral-400));
+  }
+
+  .dark span,
+  html.dark span,
+  body.dark span {
+    color: inherit;
   }
 
   h1, h2, h3, h4, h5, h6 {
