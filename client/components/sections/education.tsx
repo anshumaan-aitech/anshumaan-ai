@@ -49,10 +49,10 @@ export function EducationSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-white mb-4">
-            Educational <span className="text-gradient">Journey</span>
+            Technical <span className="text-gradient">Education</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-            Academic excellence and continuous learning from school to advanced studies
+            Advanced computer science education with focus on modern software development
           </p>
         </motion.div>
 
