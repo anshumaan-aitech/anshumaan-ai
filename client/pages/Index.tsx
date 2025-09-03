@@ -20,6 +20,7 @@ export default function Index() {
       <main>
         <HeroSection />
         <AboutSection />
+        <SpaceAnimation />
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
