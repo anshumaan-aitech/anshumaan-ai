@@ -11,65 +11,16 @@ const educationData = [
     grade: "CGPA: 8.82",
     gradeType: "CGPA",
     status: "Current",
-    description: "Pursuing advanced studies in computer applications with focus on software development, algorithms, and emerging technologies.",
+    description: "Pursuing advanced studies in computer applications with focus on software development, algorithms, and emerging technologies. Specialized coursework in Full Stack Development, AI/ML, and modern software engineering practices.",
     highlights: [
-      "Specialized in Full Stack Development",
-      "Active participation in hackathons",
-      "Research in AI and Machine Learning applications"
+      "Specialized in Full Stack Development and Software Engineering",
+      "Active participation in hackathons and coding competitions",
+      "Research projects in AI and Machine Learning applications",
+      "Advanced coursework in Data Structures, Algorithms, and System Design",
+      "Hands-on experience with modern development frameworks and tools"
     ],
     icon: GraduationCap,
     color: "bg-brand-600"
-  },
-  {
-    degree: "Bachelor of Commerce (Accounts Hons.)",
-    institution: "Patliputra University",
-    location: "Patna",
-    period: "2020 – 2023",
-    grade: "74%",
-    gradeType: "Percentage",
-    status: "Completed",
-    description: "Graduated with honors in Commerce with specialization in Accounts, building strong analytical and business acumen.",
-    highlights: [
-      "Graduated with First Division",
-      "Strong foundation in business principles",
-      "Developed analytical thinking skills"
-    ],
-    icon: Award,
-    color: "bg-green-600"
-  },
-  {
-    degree: "Class 12 (Commerce)",
-    institution: "Premalok Mission School",
-    location: "Patna",
-    period: "2020",
-    grade: "69%",
-    gradeType: "Percentage",
-    status: "Completed",
-    description: "Completed higher secondary education in Commerce stream, establishing foundation for business and technology studies.",
-    highlights: [
-      "Commerce stream specialization",
-      "Participated in extracurricular activities",
-      "Leadership roles in student committees"
-    ],
-    icon: Star,
-    color: "bg-blue-600"
-  },
-  {
-    degree: "Class 10",
-    institution: "St. Anne's High School",
-    location: "Patna",
-    period: "2018",
-    grade: "63%",
-    gradeType: "Percentage",
-    status: "Completed",
-    description: "Completed secondary education with well-rounded academic performance and active participation in school activities.",
-    highlights: [
-      "Well-rounded academic performance",
-      "Active in sports and cultural events",
-      "Foundation in STEM subjects"
-    ],
-    icon: GraduationCap,
-    color: "bg-purple-600"
   }
 ];
 
