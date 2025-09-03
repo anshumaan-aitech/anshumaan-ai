@@ -24,8 +24,8 @@ export default function Index() {
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
-        <EducationSection />
         <CertificationsSection />
+        <EducationSection />
         <TestimonialsSection />
         <AvailabilitySection />
         <ContactSection />
