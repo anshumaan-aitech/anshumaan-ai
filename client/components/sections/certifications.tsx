@@ -181,10 +181,10 @@ export function CertificationsSection() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                { label: "Total Certifications", value: "5+", description: "From top institutions" },
-                { label: "Training Hours", value: "500+", description: "Hands-on learning" },
-                { label: "Technologies Covered", value: "15+", description: "Diverse skill set" },
-                { label: "Years of Learning", value: "3+", description: "Continuous growth" }
+                { label: "Key Certifications", value: "3", description: "Elite institutions" },
+                { label: "Training Hours", value: "300+", description: "Focused learning" },
+                { label: "Core Technologies", value: "8+", description: "Specialized skills" },
+                { label: "Professional Growth", value: "∞", description: "Continuous improvement" }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
