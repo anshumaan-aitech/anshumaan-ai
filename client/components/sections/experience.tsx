@@ -15,17 +15,6 @@ const experiences = [
     current: true
   },
   {
-    title: "Java Business Application Training",
-    company: "IIT Bombay",
-    location: "Mumbai",
-    period: "Completed on 17 June 2025",
-    type: "Training",
-    icon: GraduationCap,
-    description: "Completed advanced training in Java business applications from prestigious IIT Bombay.",
-    technologies: ["Java", "Business Applications", "Enterprise Development"],
-    current: false
-  },
-  {
     title: "Java Full Stack Development Intern",
     company: "Wipro TalentNext",
     location: "Remote",
@@ -34,28 +23,6 @@ const experiences = [
     icon: Briefcase,
     description: "Worked on REST APIs, full-stack applications, and deployment strategies. Gained hands-on experience in enterprise-level development.",
     technologies: ["Java", "REST APIs", "Full Stack", "Deployment"],
-    current: false
-  },
-  {
-    title: "Web Full Stack Developer Internship",
-    company: "EduSkills (Virtual)",
-    location: "Remote",
-    period: "July – Sept 2024",
-    type: "Internship",
-    icon: Briefcase,
-    description: "Learned HTML, CSS, JS, Tailwind CSS, and SQL, completing 8 modules + final assessment with comprehensive web development training.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "SQL"],
-    current: false
-  },
-  {
-    title: "Android Developer Internship",
-    company: "EduSkills (Virtual)",
-    location: "Remote",
-    period: "Apr – Jun 2024",
-    type: "Internship",
-    icon: Briefcase,
-    description: "Focused on Android app UI, layouts, and backend service integration. Developed mobile application development skills.",
-    technologies: ["Android", "UI/UX", "Mobile Development", "Backend Integration"],
     current: false
   },
   {
