@@ -181,6 +181,24 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Force dark mode text colors */
+  .dark body,
+  .dark * {
+    color: inherit;
+  }
+
+  .dark .text-neutral-600 {
+    color: hsl(var(--neutral-400)) !important;
+  }
+
+  .dark .text-neutral-700 {
+    color: hsl(var(--neutral-300)) !important;
+  }
+
+  .dark .text-neutral-900 {
+    color: hsl(var(--neutral-100)) !important;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold leading-tight tracking-tight;
   }
