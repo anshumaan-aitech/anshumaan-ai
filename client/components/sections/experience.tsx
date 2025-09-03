@@ -162,9 +162,9 @@ export function ExperienceSection() {
         >
           {[
             { label: "Years of Experience", value: "2+", icon: Calendar },
-            { label: "Companies Worked", value: "5+", icon: Briefcase },
-            { label: "Certifications", value: "5+", icon: Award },
-            { label: "Technologies Mastered", value: "15+", icon: GraduationCap }
+            { label: "Key Positions", value: "3", icon: Briefcase },
+            { label: "Core Technologies", value: "8+", icon: Award },
+            { label: "Professional Growth", value: "∞", icon: GraduationCap }
           ].map((stat, index) => (
             <motion.div
               key={index}
