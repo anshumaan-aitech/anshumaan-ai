@@ -129,16 +129,35 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Optimized Floating Elements */}
       <motion.div
-        animate={{ y: [0, -20, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-10 w-72 h-72 bg-brand-600/10 rounded-full blur-3xl"
+        animate={{
+          y: [0, -15, 0],
+          opacity: [0.6, 0.8, 0.6]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          repeatType: "loop"
+        }}
+        className="absolute top-20 left-10 w-64 h-64 bg-brand-600/8 rounded-full blur-3xl hardware-accelerated"
+        style={{ willChange: "transform, opacity" }}
       />
       <motion.div
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-20 right-10 w-96 h-96 bg-brand-400/10 rounded-full blur-3xl"
+        animate={{
+          y: [0, 15, 0],
+          opacity: [0.5, 0.7, 0.5]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+          repeatType: "loop"
+        }}
+        className="absolute bottom-20 right-10 w-80 h-80 bg-brand-400/8 rounded-full blur-3xl hardware-accelerated"
+        style={{ willChange: "transform, opacity" }}
       />
     </section>
   );
