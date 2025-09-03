@@ -65,7 +65,7 @@ export function AboutSection() {
             className="relative"
           >
             {/* Animated border container */}
-            <div className="relative mx-auto lg:mx-0 w-[450px] h-[450px] p-2">
+            <div className="relative mx-auto lg:mx-0 w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] p-2">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{
