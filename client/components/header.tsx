@@ -3,6 +3,7 @@ import { Menu, X, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 import { motion, AnimatePresence } from "framer-motion";
+import { throttledScrollHandler, smoothScrollTo } from "@/lib/scroll-utils";
 
 const navigation = [
   { name: "About", href: "#about" },
