@@ -147,7 +147,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-neutral-400 text-sm">Location</p>
-                  <p className="text-neutral-300">Greater Noida, India</p>
+                  <p className="text-neutral-300">Pune, India</p>
                 </div>
               </div>
             </motion.div>
