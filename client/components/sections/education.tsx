@@ -160,21 +160,21 @@ export function EducationSection() {
             {
               title: "Current CGPA",
               value: "8.82",
-              description: "Master's Program",
+              description: "Master's in Computer Applications",
               icon: Star,
               color: "text-yellow-500"
             },
             {
-              title: "Academic Years",
-              value: "7+",
-              description: "Higher Education",
+              title: "Specialization",
+              value: "MCA",
+              description: "Advanced Computing",
               icon: Calendar,
               color: "text-blue-500"
             },
             {
-              title: "Institutions",
-              value: "4",
-              description: "Quality Education",
+              title: "Research Focus",
+              value: "AI/ML",
+              description: "Emerging Technologies",
               icon: GraduationCap,
               color: "text-green-500"
             }
