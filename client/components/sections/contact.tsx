@@ -43,7 +43,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Greater Noida, India",
+    value: "Pune, India",
     link: "#"
   }
 ];
