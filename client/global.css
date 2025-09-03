@@ -221,9 +221,46 @@
     @apply bg-black/10 backdrop-blur-md border border-white/10;
   }
 
-  /* Smooth scrolling */
+  /* Smooth scrolling with performance optimization */
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Performance optimizations for animations */
+  .animate-spin,
+  .animate-pulse,
+  [class*="rotate"],
+  [class*="transform"] {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Optimize frequently animated elements */
+  .motion-safe\:animate-float {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  /* GPU acceleration for smooth animations */
+  .hardware-accelerated {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
 
   /* Hide scrollbar for webkit browsers */
@@ -235,5 +272,11 @@
   html {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Optimize image rendering */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
