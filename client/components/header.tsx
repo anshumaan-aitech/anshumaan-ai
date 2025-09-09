@@ -35,7 +35,6 @@ export function Header() {
     }
   };
 
-
   return (
     <>
       <motion.header
@@ -104,12 +103,7 @@ export function Header() {
                   GitHub
                 </a>
               </Button>
-              <Button
-                asChild
-                variant="ghost"
-                size="icon"
-                className="w-9 h-9"
-              >
+              <Button asChild variant="ghost" size="icon" className="w-9 h-9">
                 <a
                   href="https://www.linkedin.com/in/anshumaan-sharma-b62654237"
                   target="_blank"
@@ -211,11 +205,7 @@ export function Header() {
                       GitHub Profile
                     </a>
                   </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full"
-                  >
+                  <Button asChild variant="outline" className="w-full">
                     <a
                       href="https://www.linkedin.com/in/anshumaan-sharma-b62654237"
                       target="_blank"
