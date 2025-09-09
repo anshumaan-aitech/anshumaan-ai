@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { smoothScrollTo } from "@/lib/scroll-utils";
 
 const availabilityItems = [
   {
@@ -201,7 +202,7 @@ export function AvailabilitySection() {
               size="lg"
               className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4"
             >
-              <a href="#contact">
+              <a href="#contact" onClick={(e) => { e.preventDefault(); smoothScrollTo('#contact', 80); }}>
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Start a Conversation
               </a>
