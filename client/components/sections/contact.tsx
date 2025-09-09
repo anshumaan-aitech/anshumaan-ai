@@ -92,22 +92,28 @@ export function ContactSection() {
     e.preventDefault();
     setFormStatus({ type: "loading", message: "Sending message..." });
 
-    // Basic client-side validation to prevent malformed requests
-    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
-    if (!formData.name || !emailValid || !formData.message || formData.message.trim().length < 3) {
-      setFormStatus({ type: "error", message: "Please enter a valid name, email, and message." });
-      return;
-    }
-
     const toEmail = "its.anshumaansharma@gmail.com";
     const isStaticHost = /github\.io$/.test(window.location.hostname);
 
+    // On static hosts (GitHub Pages), bypass strict email validation and open mail client
     if (isStaticHost) {
+      if (!formData.name?.trim() || !formData.message?.trim()) {
+        setFormStatus({ type: "error", message: "Please enter your name and message." });
+        return;
+      }
+      const emailDisplay = formData.email?.trim() || "(no email provided)";
       const subject = `New message from ${formData.name}`;
-      const body = `From: ${formData.name} <${formData.email}>\n\n${formData.message}`;
+      const body = `From: ${formData.name} <${emailDisplay}>\n\n${formData.message}`;
       const mailto = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       setFormStatus({ type: "idle", message: "" });
       window.location.href = mailto;
+      return;
+    }
+
+    // On servers (with /api/contact), validate email strictly
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+    if (!formData.name?.trim() || !emailValid || !formData.message?.trim()) {
+      setFormStatus({ type: "error", message: "Please enter a valid name, email, and message." });
       return;
     }
 
