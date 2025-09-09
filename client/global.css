@@ -256,6 +256,68 @@
     color: hsl(var(--foreground)) !important;
   }
 
+  /* Dark mode background normalization for surfaces (overrides Bootstrap/Tailwind light bg utilities) */
+  .dark .bg-white,
+  html.dark .bg-white,
+  body.dark .bg-white,
+  .dark .bg-neutral-50,
+  html.dark .bg-neutral-50,
+  body.dark .bg-neutral-50,
+  .dark .bg-neutral-100,
+  html.dark .bg-neutral-100,
+  body.dark .bg-neutral-100,
+  .dark .bg-gray-50,
+  html.dark .bg-gray-50,
+  body.dark .bg-gray-50,
+  .dark .bg-gray-100,
+  html.dark .bg-gray-100,
+  body.dark .bg-gray-100 {
+    background-color: hsl(var(--card)) !important;
+  }
+
+  /* Bootstrap components in dark mode */
+  .dark .card,
+  html.dark .card,
+  body.dark .card,
+  .dark .modal-content,
+  html.dark .modal-content,
+  body.dark .modal-content,
+  .dark .dropdown-menu,
+  html.dark .dropdown-menu,
+  body.dark .dropdown-menu,
+  .dark .list-group-item,
+  html.dark .list-group-item,
+  body.dark .list-group-item,
+  .dark .offcanvas,
+  html.dark .offcanvas,
+  body.dark .offcanvas,
+  .dark .popover,
+  html.dark .popover,
+  body.dark .popover,
+  .dark .toast,
+  html.dark .toast,
+  body.dark .toast {
+    background-color: hsl(var(--card)) !important;
+    color: hsl(var(--foreground)) !important;
+    border-color: hsl(var(--border)) !important;
+  }
+
+  /* Normalize borders on dark surfaces */
+  .dark .border-neutral-200,
+  html.dark .border-neutral-200,
+  body.dark .border-neutral-200,
+  .dark .border-neutral-300,
+  html.dark .border-neutral-300,
+  body.dark .border-neutral-300,
+  .dark .border-gray-200,
+  html.dark .border-gray-200,
+  body.dark .border-gray-200,
+  .dark .border-gray-300,
+  html.dark .border-gray-300,
+  body.dark .border-gray-300 {
+    border-color: hsl(var(--border)) !important;
+  }
+
   /* Ensure paragraph text is properly colored in dark mode */
   .dark p,
   html.dark p,
