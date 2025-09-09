@@ -67,7 +67,7 @@ export function Header() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="hidden md:flex space-x-1"
+              className="hidden lg:flex space-x-1"
             >
               {navigation.map((item, index) => (
                 <motion.button
@@ -88,7 +88,7 @@ export function Header() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="hidden md:flex items-center space-x-3"
+              className="hidden lg:flex items-center space-x-3"
             >
               <Button
                 asChild
@@ -127,7 +127,7 @@ export function Header() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="md:hidden flex items-center space-x-2"
+              className="lg:hidden flex items-center space-x-2"
             >
               <ThemeToggle />
               <Button
@@ -155,7 +155,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 md:hidden"
+            className="fixed inset-0 z-40 lg:hidden"
           >
             <motion.div
               initial={{ opacity: 0 }}
