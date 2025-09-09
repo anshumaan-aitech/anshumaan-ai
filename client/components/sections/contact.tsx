@@ -92,6 +92,18 @@ export function ContactSection() {
     e.preventDefault();
     setFormStatus({ type: "loading", message: "Sending message..." });
 
+    const toEmail = "its.anshumaansharma@gmail.com";
+    const isStaticHost = /github\.io$/.test(window.location.hostname);
+
+    if (isStaticHost) {
+      const subject = `New message from ${formData.name}`;
+      const body = `From: ${formData.name} <${formData.email}>\n\n${formData.message}`;
+      const mailto = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      setFormStatus({ type: "idle", message: "" });
+      window.location.href = mailto;
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -99,9 +111,10 @@ export function ContactSection() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      const contentType = res.headers.get("content-type") || "";
+      const data = contentType.includes("application/json") ? await res.json() : null;
       if (!res.ok || !data?.ok) {
-        throw new Error(data?.error || "Failed to send");
+        throw new Error(data?.error || `Request failed (${res.status})`);
       }
 
       setFormStatus({
@@ -116,6 +129,10 @@ export function ContactSection() {
         setFormStatus({ type: "idle", message: "" });
       }, 5000);
     } catch (error: any) {
+      const subject = `New message from ${formData.name}`;
+      const body = `From: ${formData.name} <${formData.email}>\n\n${formData.message}`;
+      const mailto = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       setFormStatus({
         type: "error",
         message:
