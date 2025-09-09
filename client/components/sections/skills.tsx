@@ -72,6 +72,7 @@ const skillCategories = [
       { name: "CSS", level: "Advanced", icon: Globe },
       { name: "JavaScript", level: "Advanced", icon: Globe },
       { name: "Tailwind CSS", level: "Advanced", icon: Monitor },
+      { name: "Bootstrap", level: "Advanced", icon: Monitor },
     ]
   }
 ];
