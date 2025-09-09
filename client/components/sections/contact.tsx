@@ -112,7 +112,9 @@ export function ContactSection() {
       });
 
       const contentType = res.headers.get("content-type") || "";
-      const data = contentType.includes("application/json") ? await res.json() : null;
+      const data = contentType.includes("application/json")
+        ? await res.json()
+        : null;
       if (!res.ok || !data?.ok) {
         throw new Error(data?.error || `Request failed (${res.status})`);
       }
