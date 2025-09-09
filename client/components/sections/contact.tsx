@@ -90,28 +90,32 @@ export function ContactSection() {
     setFormStatus({ type: 'loading', message: 'Sending message...' });
 
     try {
-      // In a real implementation, you would send to Formspree or your backend
-      // For now, we'll simulate a form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Simulate success
-      setFormStatus({ 
-        type: 'success', 
-        message: 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.' 
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-      
-      // Reset form
+
+      const data = await res.json();
+      if (!res.ok || !data?.ok) {
+        throw new Error(data?.error || 'Failed to send');
+      }
+
+      setFormStatus({
+        type: 'success',
+        message: "Thank you! Your message has been sent successfully. I'll get back to you soon."
+      });
+
       setFormData({ name: '', email: '', message: '' });
-      
-      // Clear success message after 5 seconds
+
       setTimeout(() => {
         setFormStatus({ type: 'idle', message: '' });
       }, 5000);
-      
-    } catch (error) {
-      setFormStatus({ 
-        type: 'error', 
-        message: 'Sorry, there was an error sending your message. Please try again or contact me directly.' 
+
+    } catch (error: any) {
+      setFormStatus({
+        type: 'error',
+        message: error?.message || 'Sorry, there was an error sending your message. Please try again or contact me directly.'
       });
     }
   };
