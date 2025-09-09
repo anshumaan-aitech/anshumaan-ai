@@ -92,6 +92,13 @@ export function ContactSection() {
     e.preventDefault();
     setFormStatus({ type: "loading", message: "Sending message..." });
 
+    // Basic client-side validation to prevent malformed requests
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+    if (!formData.name || !emailValid || !formData.message || formData.message.trim().length < 3) {
+      setFormStatus({ type: "error", message: "Please enter a valid name, email, and message." });
+      return;
+    }
+
     const toEmail = "its.anshumaansharma@gmail.com";
     const isStaticHost = /github\.io$/.test(window.location.hostname);
 
