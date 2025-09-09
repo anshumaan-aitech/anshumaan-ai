@@ -5,7 +5,7 @@ import { createServer } from "./server";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/anshumaan-ai/" : "/",
+  base: mode === "production" ? `/${(process.env.GITHUB_REPOSITORY || "anshumaan-aitech/anshumaan-ai").split("/")[1]}/` : "/",
   server: {
     host: "::",
     port: 8080,
