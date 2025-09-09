@@ -217,7 +217,7 @@ export function TestimonialsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {[
             { label: "Happy Colleagues", value: "15+", description: "Across different companies" },
@@ -231,15 +231,15 @@ export function TestimonialsSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-lg border border-neutral-200 dark:border-neutral-700"
+              className="text-center bg-white dark:bg-neutral-900 rounded-2xl p-6 shadow-lg border border-neutral-200 dark:border-neutral-700 overflow-hidden min-w-0"
             >
-              <div className="text-3xl font-bold text-brand-600 dark:text-brand-400 mb-2">
+              <div className="text-3xl font-bold text-brand-600 dark:text-brand-400 mb-2 break-words whitespace-normal">
                 {stat.value}
               </div>
-              <div className="text-lg font-semibold text-neutral-900 dark:text-white mb-1">
+              <div className="text-lg font-semibold text-neutral-900 dark:text-white mb-1 break-words whitespace-normal">
                 {stat.label}
               </div>
-              <div className="text-sm text-neutral-500 dark:text-neutral-500">
+              <div className="text-sm text-neutral-500 dark:text-neutral-500 break-words whitespace-normal">
                 {stat.description}
               </div>
             </motion.div>
