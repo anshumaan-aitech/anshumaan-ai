@@ -7,7 +7,7 @@ import { createServer } from "./server";
 export default defineConfig(({ mode }) => ({
   base:
     mode === "production"
-      ? `/${(process.env.GITHUB_REPOSITORY || "anshumaan-aitech/anshumaan-ai").split("/")[1]}/`
+      ? "./"
       : "/",
   server: {
     host: "::",
