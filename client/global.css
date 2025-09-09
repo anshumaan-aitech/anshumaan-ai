@@ -206,11 +206,33 @@
     color: hsl(var(--neutral-100)) !important;
   }
 
+  /* Force white text for common dark mode overrides */
+  .dark .text-neutral-800,
+  html.dark .text-neutral-800,
+  body.dark .text-neutral-800,
+  .dark .text-neutral-700,
+  html.dark .text-neutral-700,
+  body.dark .text-neutral-700,
+  .dark .text-neutral-600,
+  html.dark .text-neutral-600,
+  body.dark .text-neutral-600,
+  .dark .text-neutral-500,
+  html.dark .text-neutral-500,
+  body.dark .text-neutral-500,
+  .dark .text-gray-900,
+  html.dark .text-gray-900,
+  body.dark .text-gray-900,
+  .dark .text-black,
+  html.dark .text-black,
+  body.dark .text-black {
+    color: hsl(var(--foreground)) !important;
+  }
+
   /* Ensure paragraph text is properly colored in dark mode */
   .dark p,
   html.dark p,
   body.dark p {
-    color: hsl(var(--neutral-400));
+    color: hsl(var(--foreground));
   }
 
   .dark span,

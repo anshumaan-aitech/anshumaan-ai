@@ -1,4 +1,6 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./global.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { Toaster } from "@/components/ui/toaster";
 import { createRoot } from "react-dom/client";
