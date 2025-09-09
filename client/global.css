@@ -219,12 +219,40 @@
   .dark .text-neutral-500,
   html.dark .text-neutral-500,
   body.dark .text-neutral-500,
+  .dark .text-neutral-400,
+  html.dark .text-neutral-400,
+  body.dark .text-neutral-400,
+  .dark .text-neutral-300,
+  html.dark .text-neutral-300,
+  body.dark .text-neutral-300,
   .dark .text-gray-900,
   html.dark .text-gray-900,
   body.dark .text-gray-900,
+  .dark .text-gray-800,
+  html.dark .text-gray-800,
+  body.dark .text-gray-800,
+  .dark .text-gray-700,
+  html.dark .text-gray-700,
+  body.dark .text-gray-700,
+  .dark .text-gray-600,
+  html.dark .text-gray-600,
+  body.dark .text-gray-600,
+  .dark .text-gray-500,
+  html.dark .text-gray-500,
+  body.dark .text-gray-500,
   .dark .text-black,
   html.dark .text-black,
   body.dark .text-black {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  /* Catch-all: neutral/gray utility classes become white in dark mode */
+  .dark [class*="text-neutral-"],
+  html.dark [class*="text-neutral-"],
+  body.dark [class*="text-neutral-"],
+  .dark [class*="text-gray-"],
+  html.dark [class*="text-gray-"],
+  body.dark [class*="text-gray-"] {
     color: hsl(var(--foreground)) !important;
   }
 
