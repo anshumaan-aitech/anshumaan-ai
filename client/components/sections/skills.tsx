@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { 
-  Code, 
-  Database, 
-  Cloud, 
-  Wrench, 
+import {
+  Code,
+  Database,
+  Cloud,
+  Wrench,
   Monitor,
   FileCode,
   Coffee,
@@ -11,7 +11,7 @@ import {
   Server,
   Layers,
   Cpu,
-  GitBranch
+  GitBranch,
 } from "lucide-react";
 
 const skillCategories = [
@@ -24,7 +24,7 @@ const skillCategories = [
       { name: "Python", level: "Advanced", icon: FileCode },
       { name: "C", level: "Basics", icon: Code },
       { name: "C++", level: "Basics", icon: Code },
-    ]
+    ],
   },
   {
     title: "Frameworks & Libraries",
@@ -34,7 +34,7 @@ const skillCategories = [
       { name: "Flask", level: "Advanced", icon: Server },
       { name: "JSP", level: "Intermediate", icon: Globe },
       { name: "JDBC", level: "Intermediate", icon: Database },
-    ]
+    ],
   },
   {
     title: "Databases",
@@ -43,7 +43,7 @@ const skillCategories = [
       { name: "MySQL", level: "Advanced", icon: Database },
       { name: "Oracle SQL", level: "Advanced", icon: Database },
       { name: "MongoDB", level: "Intermediate", icon: Database },
-    ]
+    ],
   },
   {
     title: "Integration & Cloud",
@@ -51,7 +51,7 @@ const skillCategories = [
     skills: [
       { name: "SAP CPI", level: "Intermediate", icon: Cloud },
       { name: "REST APIs", level: "Advanced", icon: Server },
-    ]
+    ],
   },
   {
     title: "Tools & Platforms",
@@ -62,7 +62,7 @@ const skillCategories = [
       { name: "Eclipse", level: "Advanced", icon: Code },
       { name: "VS Code", level: "Advanced", icon: Code },
       { name: "Anaconda", level: "Intermediate", icon: Wrench },
-    ]
+    ],
   },
   {
     title: "Front-End Development",
@@ -73,8 +73,8 @@ const skillCategories = [
       { name: "JavaScript", level: "Advanced", icon: Globe },
       { name: "Tailwind CSS", level: "Advanced", icon: Monitor },
       { name: "Bootstrap", level: "Advanced", icon: Monitor },
-    ]
-  }
+    ],
+  },
 ];
 
 const getLevelColor = (level: string) => {
@@ -122,7 +122,8 @@ export function SkillsSection() {
             Technical <span className="text-gradient">Skills</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-            Comprehensive expertise across multiple programming languages, frameworks, and development tools
+            Comprehensive expertise across multiple programming languages,
+            frameworks, and development tools
           </p>
         </motion.div>
 
@@ -153,9 +154,9 @@ export function SkillsSection() {
                     key={skillIndex}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                    transition={{
+                      duration: 0.5,
+                      delay: categoryIndex * 0.1 + skillIndex * 0.05,
                     }}
                     viewport={{ once: true }}
                     className="group"
@@ -167,24 +168,35 @@ export function SkillsSection() {
                           {skill.name}
                         </span>
                       </div>
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full text-white ${getLevelColor(skill.level)}`}>
+                      <span
+                        className={`px-2 py-1 text-xs font-medium rounded-full text-white ${getLevelColor(skill.level)}`}
+                      >
                         {skill.level}
                       </span>
                     </div>
-                    
+
                     {/* Progress Bar */}
                     <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: "var(--target-width)" }}
-                        transition={{ 
-                          duration: 1, 
+                        transition={{
+                          duration: 1,
                           delay: categoryIndex * 0.1 + skillIndex * 0.1,
-                          ease: "easeOut"
+                          ease: "easeOut",
                         }}
                         viewport={{ once: true }}
                         className={`h-2 rounded-full ${getLevelColor(skill.level)} ${getLevelWidth(skill.level)}`}
-                        style={{"--target-width": getLevelWidth(skill.level).replace("w-", "").replace("full", "100%").replace("5/6", "83.33%").replace("3/4", "75%").replace("1/2", "50%")} as any}
+                        style={
+                          {
+                            "--target-width": getLevelWidth(skill.level)
+                              .replace("w-", "")
+                              .replace("full", "100%")
+                              .replace("5/6", "83.33%")
+                              .replace("3/4", "75%")
+                              .replace("1/2", "50%"),
+                          } as any
+                        }
                       />
                     </div>
                   </motion.div>
@@ -207,14 +219,32 @@ export function SkillsSection() {
           </h4>
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { level: "Proficient", color: "bg-emerald-500", description: "Expert level with extensive experience" },
-              { level: "Advanced", color: "bg-blue-500", description: "Strong proficiency and regular usage" },
-              { level: "Intermediate", color: "bg-yellow-500", description: "Good understanding with some experience" },
-              { level: "Basics", color: "bg-gray-500", description: "Fundamental knowledge and understanding" }
+              {
+                level: "Proficient",
+                color: "bg-emerald-500",
+                description: "Expert level with extensive experience",
+              },
+              {
+                level: "Advanced",
+                color: "bg-blue-500",
+                description: "Strong proficiency and regular usage",
+              },
+              {
+                level: "Intermediate",
+                color: "bg-yellow-500",
+                description: "Good understanding with some experience",
+              },
+              {
+                level: "Basics",
+                color: "bg-gray-500",
+                description: "Fundamental knowledge and understanding",
+              },
             ].map((item, index) => (
               <div key={index} className="flex items-center space-x-3 text-sm">
                 <div className={`w-3 h-3 rounded-full ${item.color}`} />
-                <span className="font-medium text-neutral-900 dark:text-white">{item.level}</span>
+                <span className="font-medium text-neutral-900 dark:text-white">
+                  {item.level}
+                </span>
                 <span className="text-neutral-600 dark:text-neutral-400 hidden sm:inline">
                   - {item.description}
                 </span>

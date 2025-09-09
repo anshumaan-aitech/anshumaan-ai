@@ -5,17 +5,28 @@ export async function handleContact(req: Request, res: Response) {
   const { name, email, message } = req.body ?? {};
 
   if (!name || !email || !message) {
-    return res.status(400).json({ ok: false, error: "Missing required fields" });
+    return res
+      .status(400)
+      .json({ ok: false, error: "Missing required fields" });
   }
 
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT || 587);
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL || process.env.TO_EMAIL || process.env.SMTP_USER;
+  const to =
+    process.env.CONTACT_TO_EMAIL ||
+    process.env.TO_EMAIL ||
+    process.env.SMTP_USER;
 
   if (!host || !user || !pass || !to) {
-    return res.status(500).json({ ok: false, error: "Email service not configured. Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO_EMAIL." });
+    return res
+      .status(500)
+      .json({
+        ok: false,
+        error:
+          "Email service not configured. Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO_EMAIL.",
+      });
   }
 
   try {
@@ -40,6 +51,8 @@ export async function handleContact(req: Request, res: Response) {
 
     return res.json({ ok: true, id: info.messageId });
   } catch (err: any) {
-    return res.status(500).json({ ok: false, error: err?.message || "Failed to send" });
+    return res
+      .status(500)
+      .json({ ok: false, error: err?.message || "Failed to send" });
   }
 }
