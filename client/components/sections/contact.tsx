@@ -98,7 +98,10 @@ export function ContactSection() {
     // On static hosts (GitHub Pages), bypass strict email validation and open mail client
     if (isStaticHost) {
       if (!formData.name?.trim() || !formData.message?.trim()) {
-        setFormStatus({ type: "error", message: "Please enter your name and message." });
+        setFormStatus({
+          type: "error",
+          message: "Please enter your name and message.",
+        });
         return;
       }
       const emailDisplay = formData.email?.trim() || "(no email provided)";
@@ -113,7 +116,10 @@ export function ContactSection() {
     // On servers (with /api/contact), validate email strictly
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
     if (!formData.name?.trim() || !emailValid || !formData.message?.trim()) {
-      setFormStatus({ type: "error", message: "Please enter a valid name, email, and message." });
+      setFormStatus({
+        type: "error",
+        message: "Please enter a valid name, email, and message.",
+      });
       return;
     }
 
