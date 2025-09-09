@@ -9,46 +9,56 @@ const testimonials = [
     name: "Dr. Rajesh Kumar",
     position: "Technical Lead, GenZ AI Labs",
     company: "GenZ AI Labs Pvt. Ltd.",
-    content: "Anshumaan is an exceptional full-stack developer with a keen eye for detail. His work on our AI-driven platforms has been outstanding, demonstrating both technical expertise and innovative problem-solving skills.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format",
-    rating: 5
+    content:
+      "Anshumaan is an exceptional full-stack developer with a keen eye for detail. His work on our AI-driven platforms has been outstanding, demonstrating both technical expertise and innovative problem-solving skills.",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format",
+    rating: 5,
   },
   {
     id: 2,
     name: "Prof. Anjali Sharma",
     position: "Project Supervisor",
     company: "Galgotias University",
-    content: "During his MCA program, Anshumaan consistently delivered high-quality projects. His Smart Waste Management platform was particularly impressive, showing his ability to tackle real-world problems with innovative solutions.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format",
-    rating: 5
+    content:
+      "During his MCA program, Anshumaan consistently delivered high-quality projects. His Smart Waste Management platform was particularly impressive, showing his ability to tackle real-world problems with innovative solutions.",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format",
+    rating: 5,
   },
   {
     id: 3,
     name: "Vikram Singh",
     position: "Senior Software Engineer",
     company: "Wipro TalentNext",
-    content: "Anshumaan's dedication during his internship was remarkable. He quickly grasped complex concepts in full-stack development and contributed meaningfully to our REST API projects. A promising talent in the field.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format",
-    rating: 5
+    content:
+      "Anshumaan's dedication during his internship was remarkable. He quickly grasped complex concepts in full-stack development and contributed meaningfully to our REST API projects. A promising talent in the field.",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format",
+    rating: 5,
   },
   {
     id: 4,
     name: "Priya Mehta",
     position: "Team Lead, Web Development",
     company: "EduSkills",
-    content: "Anshumaan completed all 8 modules of our web development program with exceptional performance. His commitment to learning and applying new technologies like Tailwind CSS was impressive.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format",
-    rating: 5
+    content:
+      "Anshumaan completed all 8 modules of our web development program with exceptional performance. His commitment to learning and applying new technologies like Tailwind CSS was impressive.",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format",
+    rating: 5,
   },
   {
     id: 5,
     name: "Arjun Patel",
     position: "Hackathon Judge",
     company: "CodeAstraa, Galgotias University",
-    content: "The WasteToWealth project presented by Anshumaan's team was truly innovative. Their approach to converting waste into useful resources demonstrated excellent technical skills and environmental consciousness.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&auto=format",
-    rating: 5
-  }
+    content:
+      "The WasteToWealth project presented by Anshumaan's team was truly innovative. Their approach to converting waste into useful resources demonstrated excellent technical skills and environmental consciousness.",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&auto=format",
+    rating: 5,
+  },
 ];
 
 export function TestimonialsSection() {
@@ -73,7 +83,9 @@ export function TestimonialsSection() {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+    );
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after 10 seconds
   };
@@ -100,7 +112,8 @@ export function TestimonialsSection() {
             What People <span className="text-gradient">Say</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-            Testimonials from colleagues, mentors, and supervisors who have worked with me
+            Testimonials from colleagues, mentors, and supervisors who have
+            worked with me
           </p>
         </motion.div>
 
@@ -205,8 +218,10 @@ export function TestimonialsSection() {
           {/* Auto-play indicator */}
           <div className="text-center mt-6">
             <div className="flex items-center justify-center space-x-2 text-sm text-neutral-500 dark:text-neutral-400">
-              <div className={`w-2 h-2 rounded-full ${isAutoPlaying ? 'bg-green-500 animate-pulse' : 'bg-neutral-400'}`} />
-              <span>{isAutoPlaying ? 'Auto-playing' : 'Paused'}</span>
+              <div
+                className={`w-2 h-2 rounded-full ${isAutoPlaying ? "bg-green-500 animate-pulse" : "bg-neutral-400"}`}
+              />
+              <span>{isAutoPlaying ? "Auto-playing" : "Paused"}</span>
             </div>
           </div>
         </div>
@@ -220,10 +235,26 @@ export function TestimonialsSection() {
           className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {[
-            { label: "Happy Colleagues", value: "15+", description: "Across different companies" },
-            { label: "Project Success", value: "100%", description: "Completion rate" },
-            { label: "Positive Feedback", value: "98%", description: "From supervisors" },
-            { label: "Recommendations", value: "5+", description: "From industry professionals" }
+            {
+              label: "Happy Colleagues",
+              value: "15+",
+              description: "Across different companies",
+            },
+            {
+              label: "Project Success",
+              value: "100%",
+              description: "Completion rate",
+            },
+            {
+              label: "Positive Feedback",
+              value: "98%",
+              description: "From supervisors",
+            },
+            {
+              label: "Recommendations",
+              value: "5+",
+              description: "From industry professionals",
+            },
           ].map((stat, index) => (
             <motion.div
               key={index}
